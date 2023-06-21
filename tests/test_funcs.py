@@ -1,5 +1,4 @@
 import pytest
-import json
 
 from utils import funcs
 import requests
@@ -14,7 +13,7 @@ def words():
 
 def test_get_data(words):
     """Test function get_data"""
-    assert type(funcs.get_data()) != type(word)
+    assert type(funcs.get_data()) == type(words)
     assert funcs.get_data() is not None
 
 
